@@ -1,4 +1,4 @@
-# Subsciber App
+# Subscriber App
 Favian Naufal - **2006597802**
 
 
