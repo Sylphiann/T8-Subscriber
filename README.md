@@ -40,3 +40,11 @@ Then the literal string provided would be converted into a `String` object with 
 ![Simulation of slow subscriber](image.png)
 
 The number of queues shown above was 6, as it meant there are 6 messages left to be processed by the subscriber as it were waiting in the queue listener.
+
+---
+### Running at least three subscribers
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+In the RabbitMQ dashboard shown above, it shows that there were 3 channels and connections connected to the the system which means that there really were 3 subscribers listening for the barrages of messages sent by the publisher. The queue of messages were cleared faster than running a single subscriber, as all the messages were equally shared and processed between those three running subscribers application. A possible improvement would be to run multiple queue listener that runs asynchronously within the running subscriber to process the incoming messages faster. 
