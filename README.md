@@ -33,4 +33,4 @@ With the following explanation on each part of the URL string:
 - The second `guest` is the other credential that is being passed which is the username.
 - And `localhost:5672` is what we would specify the host where the AMQP server is running, followed with the port number where the AMQP server listens. In this case, using localhost would mean that the server would be in the same machine with the client, while using the port `5672` which is the default standard port for non-encrypted AMQP connections.
 
-Then the literal string provided would be converted into a `String` object with the method `.to_owned()`, and the object returned by the `new_queue_listener` method then would later be followed with the method `.unwrap` which assumed to handle possible failures upon calling previous method. 
+Then the literal string provided would be converted into a `String` object with the method `.to_owned()`, and the object returned by the `new_queue_listener` method then would later be followed with the method `.unwrap()` which assumed to handle possible failures upon calling previous method. 
